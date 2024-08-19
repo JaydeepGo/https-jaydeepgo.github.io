@@ -1,5 +1,6 @@
 <div class="pb-5">
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+  {{
+    collections.all | eleventyNavigation | eleventyNavigationToHtml({
     listElement: "ul",
     listItemElement: "li",
 
@@ -11,5 +12,6 @@
     anchorClass: "",
     activeAnchorClass: "active text-imp-light dark:text-imp-dark",
     activeKey: eleventyNavigation.key
-    }) |   safe  }}
+    }) |   safe
+  }}
 </div>

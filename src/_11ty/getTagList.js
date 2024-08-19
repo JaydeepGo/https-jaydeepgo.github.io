@@ -1,9 +1,9 @@
-const excludedTags = ['all', 'nav', 'post', 'posts'];
+const excludedTags = ["all", "nav", "post", "posts"];
 
-module.exports = function (collection) {
+export default function (collection) {
   let tagSet = new Set();
   collection.getAll().forEach(function (item) {
-    if ('tags' in item.data) {
+    if ("tags" in item.data) {
       let tags = item.data.tags.filter((item) => !excludedTags.includes(item));
 
       for (const tag of tags) {
@@ -13,4 +13,4 @@ module.exports = function (collection) {
   });
 
   return [...tagSet];
-};
+}

@@ -1,36 +1,42 @@
 ---
 layout: base.njk
-noFooter: true
+noFooter: false
 eleventyComputed:
-  title: '{{ site.title }}'
+  title: "{{ site.title }}"
 ---
 
-<div class="container m-auto pt-14 profile w-[95%]">
+<div class="container m-auto pt-14 profile w-[95%] min-h-[450px]">
   <div class="md:grid md:grid-cols-2 md:grid-rows-1 md:items-center md:justify-items-center">
-    <div class=" flex profile-card items-center pb-2 border-b-8 border-main-light dark:border-main-dark my-2" >
+    <div class=" flex profile-card items-center pb-2 border-b-8 border-main-light dark:border-main-dark my-2">
       <div class="basis-1/3 shrink-0 image">
-        <img  src="{{ '/images/pc.jpg' | url }}" alt="{{ site.author }}" />
+        <img src="{{ '/images/pc.jpg' | url }}" alt="{{ site.author }}" />
       </div>
       <div class="basis-2/3 shrink p-2">
         <h2 class="text-2xl">Jaydeep Godara</h2>
         <p>Jaydeep Godara</p>
         <div class="flex  links">
           {%- for social in socials -%}
-            <a href="{{ social.link | url }}"  target="_blank" rel="{{ "me" if social.isExternal }} noopener noreferrer" class="mx-1 w-1/5 max-w-[36px] rounded p-2 bg-imp-light dark:bg-imp-dark  text-white">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="{{ social.viewBox }}"
-                    aria-labelledby="{{ social.title }}TitleHeader"
-                    role="img"            >
-                    <title id="{{ social.title }}TitleHeader">{{ social.title }}</title><path fill="currentColor" d="{{ social.svg }}"/></svg>
+            <a
+              href="{{ social.link | url }}"
+              target="_blank"
+              rel="{{ "me" if social.isExternal }} noopener noreferrer"
+              class="mx-1 w-1/5 max-w-[36px] rounded p-2 bg-imp-light dark:bg-imp-dark  text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="{{ social.viewBox }}"
+                aria-labelledby="{{ social.title }}TitleHeader"
+                role="img"
+              >
+                <title id="{{ social.title }}TitleHeader">{{ social.title }}</title>
+                <path fill="currentColor" d="{{ social.svg }}" />
+              </svg>
             </a>
           {%- endfor -%}
         </div>
       </div>
     </div>
-    <div class="pb-2 border-b-8 border-main-light dark:border-main-dark my-2 about">
-      {{ content | safe }}
-    </div>
+    <div class="pb-2 border-b-8 border-main-light dark:border-main-dark my-2 about">{{ content | safe }}</div>
     <!-- <div class=" quotes">
       <hr class="border-t-4 mt-2">
       {% include "qoute-manager.njk" %}

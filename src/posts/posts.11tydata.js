@@ -1,15 +1,15 @@
-const site = require('../_data/site.js');
+import site from "../_data/site.js";
 
-module.exports = {
-  title: '',
-  shortDescription: '',
-  summary: '',
+export default {
+  title: "",
+  shortDescription: "",
+  summary: "",
   author: site.author,
-  layout: 'post',
-  tags: 'general',
-  permalink: 'blog/{{ title | slugify }}/',
+  layout: "post",
+  tags: "general",
+  permalink: "blog/{{ title | slugify }}/",
   preview: true,
   isExternal: false,
-  featuredImage: '',
+  featuredImage: "",
   isPost: true,
 };

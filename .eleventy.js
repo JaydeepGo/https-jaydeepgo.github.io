@@ -1,14 +1,20 @@
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const filters = require('./src/_11ty/filters');
-const shortcodes = require('./src/_11ty/shortcodes');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const site = require('./src/_data/site.js');
-require('dotenv').config();
+import "dotenv/config";
 
-module.exports = function (eleventyConfig) {
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import shortcodes from "./src/_11ty/shortcodes.js";
+
+import filters from "./src/_11ty/filters.js";
+import site from "./src/_data/site.js";
+import tagList from "./src/_11ty/getTagList.js";
+/* Markdown Plugins */
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+
+export default async function (eleventyConfig) {
   // Access environment variable
-  // process.env.API_KEY;
+  // process.env.NODE_ENV;
 
   // add filters
   Object.keys(filters).forEach((filterName) => {
@@ -20,9 +26,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
   });
 
-  eleventyConfig.addWatchTarget('tailwind.config.js');
-  eleventyConfig.addWatchTarget('postcss.config.js');
-  eleventyConfig.addWatchTarget('src/css/tailwind.css');
+  eleventyConfig.addWatchTarget("tailwind.config.js");
+  eleventyConfig.addWatchTarget("postcss.config.js");
+  eleventyConfig.addWatchTarget("src/css/tailwind.css");
 
   eleventyConfig.setDataDeepMerge(false);
 
@@ -31,38 +37,36 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addPassthroughCopy('src/images');
-  eleventyConfig.addPassthroughCopy('src/favicon.ico');
-  eleventyConfig.addPassthroughCopy('src/jscripts');
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/jscripts");
 
-  eleventyConfig.addCollection('posts', function (collectionApi) {
-    return collectionApi.getFilteredByGlob('./src/posts/*.md');
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/posts/*.md");
   });
 
-  eleventyConfig.addCollection('tagList', require('./src/_11ty/getTagList'));
+  eleventyConfig.addCollection("tagList", tagList);
 
   /* Markdown Plugins */
-  let markdownIt = require('markdown-it');
-  let markdownItAnchor = require('markdown-it-anchor');
   let options = {
     html: true,
     breaks: true,
     linkify: true,
   };
 
-  eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItAnchor));
+  eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor));
 
   return {
     pathPrefix: site.pathPrefix,
     dir: {
-      input: 'src',
-      output: 'docs',
-      data: './_data',
-      includes: './_includes',
-      layouts: './_layouts',
+      input: "src",
+      output: "docs",
+      data: "./_data",
+      includes: "./_includes",
+      layouts: "./_layouts",
     },
-    templateFormats: ['md', 'njk', 'html'],
-    htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
+    templateFormats: ["md", "njk", "html"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
   };
-};
+}
