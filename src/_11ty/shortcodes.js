@@ -4,9 +4,6 @@ import site from "../_data/site.js";
 import filters from "../_11ty/filters.js";
 
 export default {
-	version: () => {
-		return process.env.NODE_ENV == "test" ? "1667346692531" : String(Date.now());
-	},
 	postcssWatch: () => {
 		try {
 			execSync("npx postcss src/css/main.css --o docs/css/main.css");
