@@ -1,33 +1,33 @@
 {
-  "name": "jd-ssg",
-  "version": "1.0.0",
-  "description": "Jaydeep Godara profolio ",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "build": "npx @11ty/eleventy",
-    "postbuild": "npx prettier --write .",
-    "serve": "npx @11ty/eleventy --serve",
-    "debug": "DEBUG=* npx eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "JaydeepGo",
-  "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.0.0-beta.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
-    "autoprefixer": "^10.4.20",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.0.1",
-    "postcss-cli": "^11.0.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-jinja-template": "^1.4.1",
-    "tailwindcss": "^3.4.10"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5"
-  }
+	"name": "jd-ssg",
+	"version": "1.0.0",
+	"description": "Jaydeep Godara profolio ",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"postbuild": "npx prettier --write .",
+		"serve": "npx @11ty/eleventy --serve",
+		"debug": "DEBUG=* npx eleventy",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "JaydeepGo",
+	"license": "ISC",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0-beta.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"@11tyrocks/eleventy-plugin-emoji-readtime": "^1.0.1",
+		"autoprefixer": "^10.4.20",
+		"markdown-it": "^14.1.0",
+		"markdown-it-anchor": "^9.0.1",
+		"postcss-cli": "^11.0.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-jinja-template": "^1.4.1",
+		"tailwindcss": "^3.4.10"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5"
+	}
 }

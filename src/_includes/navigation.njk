@@ -1,17 +1,17 @@
 <div class="pb-5">
-  {{
-    collections.all | eleventyNavigation | eleventyNavigationToHtml({
-    listElement: "ul",
-    listItemElement: "li",
+	{{
+		collections.all | eleventyNavigation | eleventyNavigationToHtml({
+		listElement: "ul",
+		listItemElement: "li",
 
-    listClass: "flex justify-center  items-center space-x-4",
-    listItemClass: "rounded-lg px-3 py-2 mt-2 font-bold hover:bg-slate-100 hover:text-slate-900",
-    listItemHasChildrenClass: "",
-    activeListItemClass: "",
+		listClass: "flex justify-center  items-center space-x-4",
+		listItemClass: "rounded-lg px-3 py-2 mt-2 font-bold hover:bg-slate-100 hover:text-slate-900",
+		listItemHasChildrenClass: "",
+		activeListItemClass: "",
 
-    anchorClass: "",
-    activeAnchorClass: "active text-imp-light dark:text-imp-dark",
-    activeKey: eleventyNavigation.key
-    }) |   safe
-  }}
+		anchorClass: "",
+		activeAnchorClass: "active text-imp-light dark:text-imp-dark",
+		activeKey: eleventyNavigation.key
+		}) |   safe
+	}}
 </div>

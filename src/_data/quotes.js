@@ -1,10 +1,6 @@
 export default [
-  {
-    saying: "Heeee",
-    author: "Life",
-  },
-  {
-    saying: "Weeee",
-    author: "",
-  },
+	{
+		saying: "Heeee",
+		author: "Life",
+	},
 ];

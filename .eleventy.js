@@ -13,60 +13,60 @@ import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 
 export default async function (eleventyConfig) {
-  // Access environment variable
-  // process.env.NODE_ENV;
+	// Access environment variable
+	// process.env.NODE_ENV;
 
-  // add filters
-  Object.keys(filters).forEach((filterName) => {
-    eleventyConfig.addFilter(filterName, filters[filterName]);
-  });
+	// add filters
+	Object.keys(filters).forEach((filterName) => {
+		eleventyConfig.addFilter(filterName, filters[filterName]);
+	});
 
-  // add Shortcodes
-  Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
-  });
+	// add Shortcodes
+	Object.keys(shortcodes).forEach((shortcodeName) => {
+		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+	});
 
-  eleventyConfig.addWatchTarget("tailwind.config.js");
-  eleventyConfig.addWatchTarget("postcss.config.js");
-  eleventyConfig.addWatchTarget("src/css/tailwind.css");
+	eleventyConfig.addWatchTarget("tailwind.config.js");
+	eleventyConfig.addWatchTarget("postcss.config.js");
+	eleventyConfig.addWatchTarget("src/css/tailwind.css");
 
-  eleventyConfig.setDataDeepMerge(false);
+	eleventyConfig.setDataDeepMerge(false);
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(syntaxHighlight);
+	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addPassthroughCopy("src/images");
-  eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("src/jscripts");
+	eleventyConfig.addPassthroughCopy("src/images");
+	eleventyConfig.addPassthroughCopy("src/favicon.ico");
+	eleventyConfig.addPassthroughCopy("src/jscripts");
 
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/posts/*.md");
-  });
+	eleventyConfig.addCollection("posts", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/posts/*.md");
+	});
 
-  eleventyConfig.addCollection("tagList", tagList);
+	eleventyConfig.addCollection("tagList", tagList);
 
-  /* Markdown Plugins */
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
+	/* Markdown Plugins */
+	let options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+	};
 
-  eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor));
+	eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor));
 
-  return {
-    pathPrefix: site.pathPrefix,
-    dir: {
-      input: "src",
-      output: "docs",
-      data: "./_data",
-      includes: "./_includes",
-      layouts: "./_layouts",
-    },
-    templateFormats: ["md", "njk", "html"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-  };
+	return {
+		pathPrefix: site.pathPrefix,
+		dir: {
+			input: "src",
+			output: "docs",
+			data: "./_data",
+			includes: "./_includes",
+			layouts: "./_layouts",
+		},
+		templateFormats: ["md", "njk", "html"],
+		htmlTemplateEngine: "njk",
+		markdownTemplateEngine: "njk",
+	};
 }
