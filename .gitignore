@@ -1,10 +1,10 @@
 # node app modules
 node_modules
 
-
 # secret data
 .env
 
 .cache
 pub.key
 Palette.md
+package-lock.json

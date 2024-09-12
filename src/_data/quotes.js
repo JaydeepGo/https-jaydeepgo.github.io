@@ -1,10 +1,6 @@
-module.exports = [
-  {
-    saying: 'Heeee',
-    author: 'Life',
-  },
-  {
-    saying: 'Weeee',
-    author: '',
-  },
+export default [
+	{
+		saying: "Heeee",
+		author: "Life",
+	},
 ];

@@ -1,15 +1,15 @@
 {% if isPost %}
-  {% set summaryCx = summary %}
-  {% set authorCx = author %}
-  {% set featuredImageCx = featuredImage %}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:type" content="article" />
+	{% set summaryCx = summary %}
+	{% set authorCx = author %}
+	{% set featuredImageCx = featuredImage %}
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:type" content="article" />
 {% else %}
-  {% set summaryCx = site.summary %}
-  {% set authorCx = site.author %}
-  {% set featuredImageCx = site.profilePic %}
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:type" content="website" />
+	{% set summaryCx = site.summary %}
+	{% set authorCx = site.author %}
+	{% set featuredImageCx = site.profilePic %}
+	<meta name="twitter:card" content="summary" />
+	<meta property="og:type" content="website" />
 {% endif %}
 
 <title>{{ title }}</title>

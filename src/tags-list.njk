@@ -6,13 +6,13 @@ permalink: /tags/
 ---
 
 <div class="content">
-  <section class="flow">
-    <h1>Tags</h1>
-    <p>See more writing by topic area:</p>
+	<section class="flow">
+		<h1>Tags</h1>
+		<p>See more writing by topic area:</p>
 
-    {% for tag in collections.tagList %}
-      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
-  </section>
+		{% for tag in collections.tagList %}
+			{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+			<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+		{% endfor %}
+	</section>
 </div>

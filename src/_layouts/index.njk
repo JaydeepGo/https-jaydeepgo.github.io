@@ -1,0 +1,14 @@
+---
+layout: base.njk
+noFooter: false
+eleventyComputed:
+title: "{{ site.title }}"
+---
+
+<div class="min-h-[250px]">{{ content | safe }}</div>
+<h2 class="py-2 border-b-2 border-main-light dark:border-main-dark ">Recent Posts</h2>
+
+<div class="recent-posts">
+	{% set inputPosts = collections.posts %}
+	{% include "posts.njk" %}
+</div>
