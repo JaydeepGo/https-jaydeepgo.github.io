@@ -7,11 +7,11 @@ export default {
 		extend: {
 			colors: {
 				base: {
-					light: "#E5D5CA",
+					light: "#fff6ee",
 					dark: "#22296B",
 				},
 				main: {
-					light: "#A1968F",
+					light: "#f2ae83",
 					dark: "#035C9E",
 				},
 				imp: {

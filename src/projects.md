@@ -1,9 +1,9 @@
 ---
-# layout: project.njk
-title: Calm Side
-# eleventyNavigation:
-#   key: Calm Side
-#   order: 3
+layout: project.njk
+title: Projects
+eleventyNavigation:
+  key: Projects
+  order: 3
 ---
 
-Posts
+Projects (WIP)

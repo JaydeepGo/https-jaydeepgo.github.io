@@ -11,8 +11,10 @@
 		<link rel="pingback" href="https://webmention.io/jaydeepgo.com/xmlrpc" />
 	</head>
 	<body class="bg-base-light dark:bg-base-dark text-text-light dark:text-text-dark  ">
-		<header>{% include "navigation.njk" %}</header>
-		<main>{{ content | safe }}</main>
+		<header class="container m-auto w-[95%] md:max-w-[90vw] mb-10">{% include "navigation.njk" %}</header>
+		<main>
+			<div class="container min-h-[450px] m-auto pt-5 w-[95%] md:max-w-[55vw]">{{ content | safe }}</div>
+		</main>
 		{% if not noFooter %}
 			{% include "footer.njk" %}
 		{% endif %}

@@ -1,17 +1,28 @@
-<div class="pb-5">
-	{{
-		collections.all | eleventyNavigation | eleventyNavigationToHtml({
-		listElement: "ul",
-		listItemElement: "li",
+<nav
+	class="flex items-center justify-between flex-wrap px-6 text-center items-center border-b border-main-light dark:border-main-dark"
+>
+	<div class="w-full sm:w-5/12 p-4">
+		<a href="/">
+			<span class="border-b-2 border-main-light dark:border-main-dark text-gray-500 font-semibold text-3xl tracking-tight">
+				Jaydeep Godara
+			</span>
+		</a>
+	</div>
+	<div class="w-7/12 flex-grow ">
+		{{
+			collections.all | eleventyNavigation | eleventyNavigationToHtml({
+			listElement: "ul",
+			listItemElement: "li",
 
-		listClass: "flex justify-center  items-center space-x-4",
-		listItemClass: "rounded-lg px-3 py-2 mt-2 font-bold hover:bg-slate-100 hover:text-slate-900",
-		listItemHasChildrenClass: "",
-		activeListItemClass: "",
+			listClass: "flex justify-center",
+			listItemClass: "rounded-lg px-3 py-2 font-semibold text-lg hover:bg-slate-100 hover:text-slate-900",
+			listItemHasChildrenClass: "",
+			activeListItemClass: "",
 
-		anchorClass: "",
-		activeAnchorClass: "active text-imp-light dark:text-imp-dark",
-		activeKey: eleventyNavigation.key
-		}) |   safe
-	}}
-</div>
+			anchorClass: "",
+			activeAnchorClass: "active text-imp-light dark:text-imp-dark",
+			activeKey: eleventyNavigation.key
+			}) | safe
+		}}
+	</div>
+</nav>

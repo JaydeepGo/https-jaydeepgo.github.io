@@ -1,15 +1,15 @@
 {%- for post in inputPosts | reverse -%}
 	<div
-		class="md:grid md:grid-cols-2 md:grid-rows-2 md:auto-rows-auto border-b-8 border-main-light dark:border-main-dark pb-2 my-4 md:items-center  post"
+		class="md:grid md:grid-cols-2 md:grid-rows-2 md:auto-rows-auto border-b-4 border-main-light dark:border-main-dark pb-2 my-4 md:items-center  post"
 	>
 		<div class="post-header">
-			<h2 class="post-title">
+			<h3 class="post-title font-bold	">
 				{% if post.data.isExternal %}
 					<a href="{{ post.data.url }}" target="_blank">{{ post.data.title }}</a>
 				{% else %}
 					<a href="{{ post.url | url }}">{{ post.data.title }}</a>
 				{% endif %}
-			</h2>
+			</h3>
 			<p>
 				<time class="postlist-date" datetime="{{ post.date }}">{{ post.date | postDateString }}</time>
 			</p>

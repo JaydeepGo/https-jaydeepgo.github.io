@@ -49,51 +49,81 @@
 		<link rel="pingback" href="https://webmention.io/jaydeepgo.com/xmlrpc" />
 	</head>
 	<body class="bg-base-light dark:bg-base-dark text-text-light dark:text-text-dark">
-		<header>
-			<div class="pb-5">
-				<ul class="flex justify-center items-center space-x-4">
-					<li class="rounded-lg px-3 py-2 mt-2 font-bold hover:bg-slate-100 hover:text-slate-900"><a href="/">About</a></li>
-					<li class="rounded-lg px-3 py-2 mt-2 font-bold hover:bg-slate-100 hover:text-slate-900"><a href="/blog/">Blog</a></li>
-				</ul>
-			</div>
+		<header class="container m-auto w-[95%] md:max-w-[90vw] mb-10">
+			<nav
+				class="flex items-center justify-between flex-wrap px-6 text-center items-center border-b border-main-light dark:border-main-dark"
+			>
+				<div class="w-full sm:w-5/12 p-4">
+					<a href="/">
+						<span class="border-b-2 border-main-light dark:border-main-dark text-gray-500 font-semibold text-3xl tracking-tight">
+							Jaydeep Godara
+						</span>
+					</a>
+				</div>
+				<div class="w-7/12 flex-grow">
+					<ul class="flex justify-center">
+						<li class="rounded-lg px-3 py-2 font-semibold text-lg hover:bg-slate-100 hover:text-slate-900">
+							<a href="/blog/">Blog</a>
+						</li>
+						<li class="rounded-lg px-3 py-2 font-semibold text-lg hover:bg-slate-100 hover:text-slate-900">
+							<a href="/projects/">Projects</a>
+						</li>
+						<li class="rounded-lg px-3 py-2 font-semibold text-lg hover:bg-slate-100 hover:text-slate-900">
+							<a href="/musings/">Random Musings</a>
+						</li>
+						<li class="rounded-lg px-3 py-2 font-semibold text-lg hover:bg-slate-100 hover:text-slate-900">
+							<a href="/about/">About</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</header>
 		<main>
-			<div class="container min-h-[450px] m-auto pt-14 w-[95%] md:max-w-[55vw] post">
-				<h1 class="post-title">The Journey of this blog</h1>
-				<p class="text-2xl my-4 post-summary">How this blog came to life.</p>
-				<p class="byline">
-					<time class="postlist-date" datetime="Wed Jan 13 2021 05:30:00 GMT+0530 (India Standard Time)">
-						Wednesday, 13 Jan, 2021
-					</time>
-					by
-					<span class="border-b-2 border-black">JaydeepGo</span>
-				</p>
-				<figure class="w-screen max-w-screen-lg ml-[50%] -translate-x-1/2 my-12">
-					<img class="w-full" src="/images/tree-736885.webp" srcset="" sizes="" alt="" />
-					<figcaption class="text-center my-2">
-						. Photo by
-						<a class="border-b-2 border-black" href="https://pixabay.com/users/bessi-909086/">Bessi</a>
-						on
-						<a class="border-b-2 border-black" href="https://pixabay.com/photos/tree-sunset-clouds-sky-silhouette-736885/">
-							pixabay
-						</a>
-					</figcaption>
-				</figure>
-				<p>In Progress...</p>
-				<p>Life is good.</p>
+			<div class="container min-h-[450px] m-auto pt-5 w-[95%] md:max-w-[55vw]">
+				<div class="container min-h-[450px] m-auto pt-14 w-[95%] md:max-w-[55vw] post">
+					<h1 class="post-title">The Journey of this blog</h1>
+					<p class="text-2xl my-4 post-summary">How this blog came to life.</p>
+					<p class="byline">
+						<time class="postlist-date" datetime="Wed Jan 13 2021 05:30:00 GMT+0530 (India Standard Time)">
+							Wednesday, 13 Jan, 2021
+						</time>
+						by
+						<span class="border-b-2 border-black">JaydeepGo</span>
+					</p>
+					<figure class="w-screen max-w-screen-lg ml-[50%] -translate-x-1/2 my-12">
+						<img class="w-full" src="/images/tree-736885.webp" srcset="" sizes="" alt="" />
+						<figcaption class="text-center my-2">
+							. Photo by
+							<a class="border-b-2 border-black" href="https://pixabay.com/users/bessi-909086/">Bessi</a>
+							on
+							<a class="border-b-2 border-black" href="https://pixabay.com/photos/tree-sunset-clouds-sky-silhouette-736885/">
+								pixabay
+							</a>
+						</figcaption>
+					</figure>
+					<p>In Progress...</p>
+					<p>Life is good.</p>
+				</div>
 			</div>
 		</main>
 
 		<footer class="footer">
 			<div class="flex flex-wrap bg-main-light dark:bg-main-dark dispay:block p-2 my-6">
-				<div class="w-full justify-center text-center py-2 newsletter">
-					<a href="https://xn--sr8hvo.ws/%F0%9F%90%86%C2%AE%EF%B8%8F%F0%9F%8F%B9/previous">←</a>
-					An
-					<a href="https://xn--sr8hvo.ws">IndieWeb Webring</a>
-					💍
-					<a href="https://xn--sr8hvo.ws/%F0%9F%90%86%C2%AE%EF%B8%8F%F0%9F%8F%B9/next">→</a>
-				</div>
-				<div class="flex justify-center w-full md:w-1/2 py-2 links">
+				<div class="flex justify-center w-full md:w-1/3 py-2 links">
+					<a
+						href="https://fosstodon.org/@jaydeepgo"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="mx-1 w-1/5 max-w-[36px] rounded p-2 bg-imp-light dark:bg-imp-dark text-white"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-labelledby="MastodonTitleHeader" role="img">
+							<title id="MastodonTitleHeader">Mastodon</title>
+							<path
+								fill="currentColor"
+								d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"
+							/>
+						</svg>
+					</a>
 					<a
 						href="https://twitter.com/JaydeepGo"
 						target="_blank"
@@ -165,9 +195,34 @@
 						</svg>
 					</a>
 				</div>
-				<div class="flex justify-center items-center w-full text-sm md:text-base md:w-1/2 copyright py-2 md:p-0">
-					<p>Copyright @2022</p>
-					<a class="pl-4" href="https://www.11ty.dev/" target="_blank">Powered By Eleventy</a>
+				<div class="w-full justify-center w-full md:w-1/3 text-center py-2 newsletter">
+					<a href="https://xn--sr8hvo.ws/%F0%9F%90%86%C2%AE%EF%B8%8F%F0%9F%8F%B9/previous">←</a>
+					An
+					<a href="https://xn--sr8hvo.ws">IndieWeb Webring</a>
+					💍
+					<a href="https://xn--sr8hvo.ws/%F0%9F%90%86%C2%AE%EF%B8%8F%F0%9F%8F%B9/next">→</a>
+				</div>
+				<div class="copyright flex justify-evenly items-center w-full md:w-1/3 text-sm md:text-base px-2 py-2 md:p-0">
+					<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="box-shadow: none" class="noshadow">
+						<img
+							alt=" This work is licensed under CC BY-NC-SA 4.0 ."
+							style="border-width: 0; width: 88px; height: 31px"
+							src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+						/>
+					</a>
+					<br />
+					<a href="https://indieweb.org/" style="box-shadow: none" class="noshadow">
+						<img
+							style="image-rendering: pixelated; width: 80px; height: 15px"
+							src="https://indieweb.org/img/indieweb-badge.png"
+							alt="IndieWebCamp"
+						/>
+					</a>
+					<br />
+					<p>
+						Build with
+						<a class="underline" href="https://www.11ty.dev/" target="_blank">11ty</a>
+					</p>
 				</div>
 			</div>
 		</footer>

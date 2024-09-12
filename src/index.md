@@ -1,21 +1,8 @@
 ---
-layout: about.njk
-eleventyNavigation:
-  key: About
-  order: 1
+layout: index.njk
 eleventyComputed:
   title: "{{ site.title }}"
 ---
-
-Hi, I'm Jaydeep Godara.
-
-Salesforce Developer, Hobbiest Game Developer
-
-I am a Salesforce Developer with 2+ years of experience in the Salesforce Service Cloud domain.
-
-- Experience in Salesforce Applications Customization and Deployment.
-- 3x certified in Salesforce CRM and trailhead Expeditioner with 79000+ points.
-- Experience in Aura/LWC, Integration, Lightning, Salesforce Einstein.
-- Good understanding of the end to end Salesforce DevOps Process implementation and execution.
-
-*Kind of lazy so I know how to deal with problems in a simple way.*
+<h1>Hey there 👋</h1>
+<br>
+<p class="text-2xl">  I’m Jaydeep Godara, hailing from the vibrant lands of India! By day, I’m a bug-busting wizard, fixing glitches and making tech smoother. But when the sun goes down, I roll up my sleeves and dive into creating cool stuff just for fun.</p>
