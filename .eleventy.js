@@ -11,6 +11,7 @@ import tagList from "./src/_11ty/getTagList.js";
 /* Markdown Plugins */
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItAttributes from "markdown-it-attrs";
 
 export default async function (eleventyConfig) {
 	// Access environment variable
@@ -54,7 +55,7 @@ export default async function (eleventyConfig) {
 		linkify: true,
 	};
 
-	eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor));
+	eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor).use(markdownItAttributes));
 
 	return {
 		pathPrefix: site.pathPrefix,

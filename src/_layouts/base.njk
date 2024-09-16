@@ -10,13 +10,15 @@
 		<link rel="webmention" href="https://webmention.io/jaydeepgo.com/webmention" />
 		<link rel="pingback" href="https://webmention.io/jaydeepgo.com/xmlrpc" />
 	</head>
-	<body class="bg-base-light dark:bg-base-dark text-text-light dark:text-text-dark  ">
-		<header class="container m-auto w-[95%] md:max-w-[90vw] mb-10">{% include "navigation.njk" %}</header>
-		<main>
+	<body class="bg-base-light dark:bg-base-dark text-text-light dark:text-text-dark flex flex-col h-lvh">
+		<header class="shrink-0	container m-auto w-[95%] md:max-w-[90vw] mb-10">{% include "navigation.njk" %}</header>
+		<main class="flex-auto">
 			<div class="container min-h-[450px] m-auto pt-5 w-[95%] md:max-w-[55vw]">{{ content | safe }}</div>
 		</main>
-		{% if not noFooter %}
-			{% include "footer.njk" %}
-		{% endif %}
+		<footer class="shrink-0	">
+			{% if not noFooter %}
+				{% include "footer.njk" %}
+			{% endif %}
+		</footer>
 	</body>
 </html>

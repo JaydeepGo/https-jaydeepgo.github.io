@@ -3,7 +3,7 @@
 		class="md:grid md:grid-cols-2 md:grid-rows-2 md:auto-rows-auto border-b-4 border-main-light dark:border-main-dark pb-2 my-4 md:items-center  post"
 	>
 		<div class="post-header">
-			<h3 class="post-title font-bold	">
+			<h3>
 				{% if post.data.isExternal %}
 					<a href="{{ post.data.url }}" target="_blank">{{ post.data.title }}</a>
 				{% else %}

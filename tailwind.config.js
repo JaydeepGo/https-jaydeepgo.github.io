@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin.js";
 
 export default {
 	content: ["./src/**/*.{html,js,njk,md}"],
@@ -33,5 +34,14 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addBase, addComponents, addUtilities, theme }) {
+			addBase({
+				h3: {
+					fontSize: theme("fontSize.lg"),
+					fontWeight: 700,
+				},
+			});
+		}),
+	],
 };
