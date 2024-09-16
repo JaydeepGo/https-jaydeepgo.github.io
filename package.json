@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"postbuild": "npx prettier --write .",
-		"serve": "npx @11ty/eleventy --serve",
+		"serve": "npx @11ty/eleventy --serve --port=8091",
 		"debug": "DEBUG=* npx eleventy",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -22,10 +22,11 @@
 		"autoprefixer": "^10.4.20",
 		"markdown-it": "^14.1.0",
 		"markdown-it-anchor": "^9.0.1",
+		"markdown-it-attrs": "^4.2.0",
 		"postcss-cli": "^11.0.0",
 		"prettier": "^3.3.3",
 		"prettier-plugin-jinja-template": "^1.4.1",
-		"tailwindcss": "^3.4.10"
+		"tailwindcss": "^3.4.11"
 	},
 	"dependencies": {
 		"dotenv": "^16.4.5"

@@ -12,10 +12,12 @@ I am a Salesforce Developer, Currently working at Salesforce as Senior Technical
 I love to build & explore diff technologies in free time and also spent my time making origamis, reading, gaming and skating on weekends. 
 <br>
 
-**Fun Facts**
-- Favourite Si-fi shows: The Expanse, Andor.
+**Fun Facts** 
+- Favourite Si-fi shows: The Expanse, Andor. 
+{.list-disc .list-inside}
 
 
 
 
 
+ 
