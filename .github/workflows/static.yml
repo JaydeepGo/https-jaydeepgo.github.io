@@ -1,7 +1,7 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-run-name: Deploy to Pages '#'${{ inputs.build_id }} 
+run-name: Deploy to Pages Build #${{ github.run_number }} - Branch: ${{ github.ref_name }} - Commit: ${{ github.sha }} - Triggered by: ${{ github.actor }}
 
 on:
   # Runs on pushes targeting the default branch
